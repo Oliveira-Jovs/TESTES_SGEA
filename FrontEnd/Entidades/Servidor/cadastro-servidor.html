@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Servidor</title>
+    <link rel="icon" href="../../images\logo.png" type="image/png">
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <img src="../../images\ifpe_logo.png" alt="Instituto Federal" class="logo">
+            <nav>
+                <a href="../../index.html">Início</a>
+                <a id="voltarLogin">Voltar</a>
+           </nav>
+        </div>
+    </header>
+
+    <main class="form-container">
+        <h2>Cadastro de Servidor</h2>
+
+        <!-- Formulário de Dados do Banco -->
+        <form id="form-banco">
+            <section class="bank-info">
+                <center><h3>Informações Bancárias</h3></center>
+                <br>
+                <label for="nomeBanco">Nome do Banco</label>
+                <input type="text" id="nomeBanco" name="nomeBanco" maxlength="50" required>
+
+                <label for="numConta">Número da Conta</label>
+                <input type="number" id="numConta" name="numConta" maxlength="13" required>
+
+                <label for="agencia">Agência</label>
+                <input type="number" id="agencia" name="agencia" maxlength="7" required>
+
+                <label for="operacao">Operação</label>
+                <input type="number" id="operacao" name="operacao" maxlength="3" required>
+
+            </section>
+        </form>
+
+        <!-- Formulário de Dados do Endereço -->
+          
+        <form id="form-endereco">
+            <section class="address-info">
+                <center><h3>Endereco</h3></center>
+                <br>
+                <label for="rua">Rua</label>
+                <input type="text" id="rua" name="rua" maxlength="58" required>
+
+                <label for="numero">Número</label>
+                <input type="number" id="numero" name="numero" maxlength="15" required>
+
+                <label for="bairro">Bairro</label>
+                <input type="text" id="bairro" name="bairro" maxlength="47" required>
+
+                <label for="cidade">Cidade</label>
+                <input type="text" id="cidade" name="cidade" maxlength="48" required>
+
+                <label for="estado">Estado</label>
+                <input type="text" id="estado" name="estado" maxlength="15" required>
+
+                <label for="cep">CEP</label>
+                <input type="number" id="cep" name="cep" maxlength="10" required>
+
+                <label for="complemento">Complemento</label>
+                <input type="text" id="complemento" name="complemento" maxlength="50" required>
+
+            </section>
+        </form>
+        
+        <!-- Formulário de Dados do Servidor -->
+        <form id="form-servidor">
+        <section class="personal-info">
+            <center><h3>Informações Pessoais</h3></center>
+            <br>
+            <label for="nome-servidor">Nome</label>
+            <input type="text" id="nome-servidor" name="nome" maxlength="50" required>
+
+            <label for="cpf">CPF</label>
+            <input type="number" id="cpf" name="cpf" maxlength="14" required>
+
+            <label for="rg">RG</label>
+            <input type="number" id="rg" name="rg" maxlength="12" required>
+
+            <label for="dataNasc">Data de Nascimento</label>
+            <input type="date" id="dataNasc" maxlength="10" name="dataNasc" required>
+
+            <label for="telefone">Telefone</label>
+            <input type="tel" id="telefone" name="telefone" maxlength="15" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" maxlength="70" required>
+
+            <label for="siape">Siape</label>
+            <input type="text" id="siape" name="siape" maxlength="15" required>
+
+            <label for="cargo">Cargo</label>
+            <input type="text" id="cargo" name="cargo" maxlength="15" required>
+
+        </section>
+        <br>
+        <button type="button" class="btn" id="submit-servidor">Salvar</button>
+        </form>
+        
+    </main>
+    <script src="script-servidor.js"></script>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-columns"></div>
+            <p>&copy; Instituto Federal de Pernambuco. Todos os direitos reservados. </p>
+        </div>
+    </footer>
+</body>
+
+<script>
+    // Evento de clique para o botão "Voltar Login"
+    document.getElementById('voltarLogin').addEventListener('click', function(event) {
+        event.preventDefault();  // Previne a navegação imediata para index.html
+
+        // Limpa o localStorage
+        localStorage.clear();
+
+        // Redireciona para a página inicial (index.html)
+        window.location.href = '../Utilizador/login-servidor.html';
+    });
+
+   
+</script>
+</html>
